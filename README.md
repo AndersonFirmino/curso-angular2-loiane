@@ -1,20 +1,10 @@
-# Angular 2  Boilerplate
+# Curso de Angular 2
 
-## Description
-Angular 2 starter project using TypeScript
+Este projeto é parte de um curso de Angular2 gratuito e com
+certificado.
 
-## Usage
-You need to install npm and Typescript in your machine prior executing this project:
+Para ganhar o certificado você tem que ser cadastrado no site da [Loiane](http://loiane.training/curso/angular-2/)
 
-1: Clone repo
-```
-git clone https://github.com/loiane/angular-2-boilerplate.git
-```
-2: Install packages
-```
-npm install
-```
-3: Start server (includes auto refreshing)
-```
-npm start
-```
+As video aulas se encontram no [YouTube](https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G)
+
+:coffee: :smile:
