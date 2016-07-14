@@ -9,10 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var cursos_service_1 = require('./cursos.service');
 var CursosComponent = (function () {
-    function CursosComponent() {
+    function CursosComponent(cursosService) {
         this.nome = "Anderson";
-        this.linguagens = ['Python', 'JavaScript', 'C++'];
+        this.cursos = cursosService.getCursos();
     }
     CursosComponent = __decorate([
         core_1.Component({
@@ -28,7 +29,7 @@ var CursosComponent = (function () {
             // `
             templateUrl: 'cursos.component.html' // busca dentro da pasta curso o html correspondente.
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [cursos_service_1.CursosService])
     ], CursosComponent);
     return CursosComponent;
 }());

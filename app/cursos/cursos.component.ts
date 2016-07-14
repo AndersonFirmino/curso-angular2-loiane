@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { CursosService } from './cursos.service'
+
 @Component({
     moduleId: module.id, // sempre adiconar esse cara quando adicionar uma url de template.
     selector: 'cursos-lista',
@@ -15,5 +17,9 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
     nome = "Anderson";
-    linguagens = ['Python', 'JavaScript', 'C++'];
+    //linguagens = ['Python', 'JavaScript', 'C++'];
+    cursos;
+    constructor(cursosService: CursosService) {
+        this.cursos = cursosService.getCursos();
+    }
 }

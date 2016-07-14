@@ -4,6 +4,8 @@ import { MeuPrimeiroComponent } from './primeiro/meu-primeiro.component'
 
 import { CursosComponent } from './cursos/cursos.component'
 
+import { CursosService } from './cursos/cursos.service'
+
 @Component({
     selector: 'my-app',
     template: `
@@ -12,7 +14,7 @@ import { CursosComponent } from './cursos/cursos.component'
         <meu-primeiro-component></meu-primeiro-component>
         <cursos-lista></cursos-lista>
     `,
-    directives: [MeuPrimeiroComponent, CursosComponent]
-
+    directives: [MeuPrimeiroComponent, CursosComponent],
+    providers: [CursosService]
 })
 export class AppComponent { }
