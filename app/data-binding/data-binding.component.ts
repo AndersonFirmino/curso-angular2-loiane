@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
   constructor() {  }
+  url = 'www.google.com.br';
+  urlImg = 'http://lorempixel.com/400/200/cats';
 
-
+  getValor() {
+    return 1;
+  }
 }

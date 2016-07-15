@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data-binding estude</title>
+</head>
+<body>
+    <section>
+        <h3>Interpolation / Interpolação</h3>
+        <p>
+            {{ url }}
+        </p>
+        <p>
+            Resultado de 1 + 1 é {{ 1 + getValor() }}
+        </p>
+        <article class="">
+            <h3>Property Binding</h3>
+            <!-- <img src="{{ urlImg }}" alt=""> -->
+            <!--
+                Por baixo dos panos o Angular2 esta fazendo isto
+                <img bind-src="urlImg">
+             -->
+             <!-- Melhor forma é esta abaixo -->
+            <img [src]="urlImg" alt="">
+        </article>
+    </section>
+</body>
+</html>

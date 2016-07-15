@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CursosService } from './cursos.service'
 
 @Component({
-    moduleId: module.id, // sempre adiconar esse cara quando adicionar uma url de template.
+    moduleId: module.id, // sempre adiconar esse cara quando adicionar uma url de template. (templateUrl)
     selector: 'cursos-lista',
     // template: `
     // <p>Olá, meu nome é: {{ nome }}</p>
