@@ -13,14 +13,44 @@ var DataBindingComponent = (function () {
     function DataBindingComponent() {
         this.url = 'www.google.com.br';
         this.urlImg = 'http://lorempixel.com/400/200/cats';
+        //No javascript a tipagem de variaveis é dinamica mas no TypeScript, podemos passar o tipo
+        //desta forma
+        //variavel_string: string = 'valor';
+        this.contudoAtual = '';
+        this.conteudoSalvo = '';
+        this.isMouseOver = false;
     }
     DataBindingComponent.prototype.getValor = function () {
         return 1;
+    };
+    DataBindingComponent.prototype.onClick = function () {
+        alert("Botão clicado");
+    };
+    DataBindingComponent.prototype.onKeyUp = function (event) {
+        console.log(event);
+        this.conteudoAtual = event.target.value;
+    };
+    DataBindingComponent.prototype.onSave = function (valor) {
+        this.conteudoSalvo = valor;
+    };
+    DataBindingComponent.prototype.onMouseSpan = function () {
+        this.isMouseOver = !this.isMouseOver;
     };
     DataBindingComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'exemplo-data-binding',
+            //podemos usar styles aqui dentro dos components, util para coisas pequenas, para um style de mais linhas usar o
+            // styleUrls
+            // styles: [
+            //   `
+            //   .highlight {
+            //       background-color: yellow;
+            //       font-weight: bold;
+            //   }
+            //   `
+            // ]
+            styleUrls: ['data-binding.component.css'],
             templateUrl: 'data-binding.component.html',
         }), 
         __metadata('design:paramtypes', [])

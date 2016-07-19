@@ -29,7 +29,9 @@
         <article class="">
             <h3>Class e Style binding</h3>
             Selecione uma classe:
-            <!-- Variaveis local no angular #nome_var (evento)="valor" -->
+            <!--
+            Declaramos ela dentro do prorpio elemento html
+            Variaveis local no angular #nome_var (evento)="valor" -->
             <select class="" name="" class="form-control" #classe (change)="0">
                 <option value="alert-success">Sucesso</option>
                 <option value="alert-info">Info</option>
@@ -64,5 +66,34 @@
 
         </article>
     </section>
+
+
+    <section class="event-binding">
+        <article class="">
+            <h3>Event binding</h3>
+            <div>
+                <button class="btn btn-warning" (click)="onClick()">Me clique!</button>
+            </div>
+
+            <br><br>
+
+            <!-- Fazendo referencia ao proprio evento passando $event ou seja abaixo sera passado o texto do input text-->
+            <input type="text" (keyup)="onKeyUp($event)"
+                (keyup.enter)="onSave($event.target.value)"
+                (blur)="onSave(campo.value)"
+                #campo
+            >
+
+            <div>Conteudo Atual: {{ conteudoAtual }}</div>
+            <div>Conteudo Salvo: {{ conteudoSalvo }}</div>
+        </article>
+
+        <span
+        (mouseover)="onMouseSpan()" (mouseout)="onMouseSpan()"
+        [class.highlight]="isMouseOver"
+        >Passe o mouse sobre mim</span>
+    </section>
+
+
 </body>
 </html>
