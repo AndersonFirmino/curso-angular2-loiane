@@ -25,6 +25,44 @@
              <!-- Melhor forma é esta abaixo -->
             <img [src]="urlImg" alt="">
         </article>
+
+        <article class="">
+            <h3>Class e Style binding</h3>
+            Selecione uma classe:
+            <!-- Variaveis local no angular #nome_var (evento)="valor" -->
+            <select class="" name="" class="form-control" #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Warning</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br>
+            <br>
+            <div class="alert {{ classe.value }}">
+                Texto colorido conforme valor do combobox.
+            </div>
+
+            <div class="alert " role="alert"
+            [class.alert-success]="classe.value == 'alert-success'"
+            >Sucesso</div>
+
+            <div class="alert " role="alert"
+            [class.alert-info]="classe.value == 'alert-info'"
+            >Info</div>
+
+            <div class="alert " role="alert"
+            [class.alert-warning]="classe.value == 'alert-warning'"
+            >Warning</div>
+
+            <div class="alert " role="alert"
+            [class.alert-danger]="classe.value == 'alert-danger'"
+            >Erro</div>
+
+            <div class="alert alert-danger"
+            [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'" role="alert">
+            Esse texto somente aparece em caso de erro</div>
+
+        </article>
     </section>
 </body>
 </html>
