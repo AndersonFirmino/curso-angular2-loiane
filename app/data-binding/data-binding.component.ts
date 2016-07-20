@@ -13,9 +13,10 @@ import { Component } from '@angular/core';
   //   }
   //   `
   // ]
-  styleUrls: ['data-binding.component.css']
-  templateUrl: 'data-binding.component.html',
+  styleUrls: ['data-binding.component.css'],
+  templateUrl: 'data-binding.component.html'
 })
+
 export class DataBindingComponent {
   constructor() {  }
   url = 'www.google.com.br';
@@ -25,9 +26,12 @@ export class DataBindingComponent {
   //desta forma
   //variavel_string: string = 'valor';
 
-  contudoAtual : string = '';
+  conteudoAtual : string = '';
   conteudoSalvo : string = '';
   isMouseOver : boolean = false;
+  nome : string = 'hey';
+
+  pessoa  = { nome: '', idade: 18 };
 
   getValor() {
     return 1;
@@ -39,7 +43,7 @@ export class DataBindingComponent {
 
   onKeyUp(event) {
     console.log(event);
-    this.conteudoAtual = event.target.value
+    this.conteudoAtual = event.target.value;
   }
 
   onSave(valor: string) {

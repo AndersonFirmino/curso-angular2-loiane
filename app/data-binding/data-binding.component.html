@@ -94,6 +94,43 @@
         >Passe o mouse sobre mim</span>
     </section>
 
+    <section>
+        <article class="">
+            <h3>
+                Two-way data-binding
+            </h3>
+
+            <!-- <input type="text"
+            [value]="nome"
+            (input)="nome = $event.target.value"
+            >
+
+            <input type="text"
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+
+
+            o que o angular faz por debaixo dos panos
+            <input type="text"
+            bindon-ngModel="nome">
+            > -->
+
+            <!-- Forma correta de se fazer o two-way data-binding -->
+            <input type="text"
+            [(ngModel)]="nome" class="form-control">
+
+            <div class="">
+                <p>Você digitou: {{ nome }}</p>
+            </div>
+
+            <div class="">
+                Meu nome é {{ pessoa.nome }} e eu tenho {{ pessoa.idade }} de idade.
+                <input type="text" [(ngModel)]="pessoa.nome" class="form-control">
+                <input type="text" [(ngModel)]="pessoa.idade" class="form-control">
+            </div>
+
+        </article>
+    </section>
 
 </body>
 </html>

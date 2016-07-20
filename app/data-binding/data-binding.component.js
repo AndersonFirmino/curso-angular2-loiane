@@ -16,9 +16,11 @@ var DataBindingComponent = (function () {
         //No javascript a tipagem de variaveis é dinamica mas no TypeScript, podemos passar o tipo
         //desta forma
         //variavel_string: string = 'valor';
-        this.contudoAtual = '';
+        this.conteudoAtual = '';
         this.conteudoSalvo = '';
         this.isMouseOver = false;
+        this.nome = 'hey';
+        this.pessoa = { nome: '', idade: 18 };
     }
     DataBindingComponent.prototype.getValor = function () {
         return 1;
@@ -51,7 +53,7 @@ var DataBindingComponent = (function () {
             //   `
             // ]
             styleUrls: ['data-binding.component.css'],
-            templateUrl: 'data-binding.component.html',
+            templateUrl: 'data-binding.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], DataBindingComponent);
