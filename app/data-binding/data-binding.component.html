@@ -142,6 +142,14 @@
             Property Bind
             <curso [nome]="nomeCurso"></curso>
              -->
+
+        </article>
+    </section>
+    <br>
+    <section>
+        <article>
+            <!-- <contador valor=10></contador> -->
+            <contador [valor]="valorInicial" (mudouValor)="onValorMudou($event)"></contador>
         </article>
     </section>
 
