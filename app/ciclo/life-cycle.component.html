@@ -1,0 +1,7 @@
+<p *ngIf="deletarConteudo != true">
+    Ciclo de vida
+
+    {{ valorInicial }}
+</p>
+<button type="button" name="button" (click)="valorInicial=20" class="btn btn-default">Mudar o valor</button>
+<button type="button" name="button" (click)="deletarConteudo = true">deletar tag de life cycle</button>

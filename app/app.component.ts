@@ -8,6 +8,8 @@ import { CursosService } from './cursos/cursos.service'
 
 import { DataBindingComponent } from './data-binding/data-binding.component'
 
+import { LifeCycleComponent } from './ciclo/life-cycle.component'
+
 @Component({
     moduleId: module.id,
     selector: 'my-app',
@@ -19,7 +21,10 @@ import { DataBindingComponent } from './data-binding/data-binding.component'
     //     <exemplo-data-binding></exemplo-data-binding>
     // `,
     templateUrl: 'app.component.html',
-    directives: [MeuPrimeiroComponent, CursosComponent, DataBindingComponent],
+    directives: [MeuPrimeiroComponent, CursosComponent, DataBindingComponent, LifeCycleComponent],
     providers: [CursosService]
 })
-export class AppComponent { }
+export class AppComponent {
+    valorInicial = 15;
+    deletarConteudo = false;
+}

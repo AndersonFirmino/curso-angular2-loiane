@@ -9,17 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var MeuPrimeiroComponent = (function () {
-    function MeuPrimeiroComponent() {
+var LifeCycleComponent = (function () {
+    function LifeCycleComponent() {
+        this.valorInicial = 10;
     }
-    MeuPrimeiroComponent = __decorate([
+    LifeCycleComponent.prototype.ngOnInit = function () {
+        console.log('ngOnInit');
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], LifeCycleComponent.prototype, "valorInicial", void 0);
+    LifeCycleComponent = __decorate([
         core_1.Component({
-            selector: 'meu-primeiro-component',
-            template: '<h2> Meu primeiro component Angular2 </h2>'
+            moduleId: module.id,
+            selector: 'lifecycle',
+            templateUrl: 'life-cycle.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], MeuPrimeiroComponent);
-    return MeuPrimeiroComponent;
+    ], LifeCycleComponent);
+    return LifeCycleComponent;
 }());
-exports.MeuPrimeiroComponent = MeuPrimeiroComponent;
-//# sourceMappingURL=meu-primeiro.component.js.map
+exports.LifeCycleComponent = LifeCycleComponent;
+//# sourceMappingURL=life-cycle.component.js.map
