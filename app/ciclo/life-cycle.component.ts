@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -10,7 +10,10 @@ export class LifeCycleComponent implements OnInit {
 
   @Input() valorInicial = 10;
 
+  @ViewChild('variavelLocalP') variavelLocalP : HTMLElement;
+
   ngOnInit() {
     console.log('ngOnInit');
+    console.log(this.variavelLocalP);    
   }
 }
